@@ -395,21 +395,24 @@ section {
     opacity: 1;
 }
 /* Mobile Menu */
-
-.menu-btn {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
+.menu-btn{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:white;
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:2000;
 }
 
 /* Mobile Navigation */
 
 @media (max-width: 768px) {
 
-    .menu-btn {
-        display: block;
-    }
+   .menu-btn{
+    display:block;
+}
 
     nav {
         display: none;
@@ -425,6 +428,57 @@ section {
     nav a {
         margin: 10px 0;
     }
+    header{
+    text-align:left;
+    padding:15px 20px;
+}
+
+header h1{
+    font-size:26px;
+    margin-right:60px;
+}
+
+.hero{
+    height:350px;
+}
+
+.hero-text{
+    width:90%;
+}
+
+.hero-text h2{
+    font-size:28px;
+}
+
+.hero-text p{
+    font-size:16px;
+}
+
+.slider{
+    height:350px;
+}
+
+.prev,
+.next{
+    font-size:22px;
+    padding:10px 14px;
+}
+
+.gallery img{
+    width:100%;
+    max-width:350px;
+    height:230px;
+    object-fit:cover;
+}
+
+.calendar-table{
+    width:100%;
+    font-size:14px;
+}
+
+#map iframe{
+    height:300px;
+}
 }
 /* Booking Section */
 
