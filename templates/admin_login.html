@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ondiri Gardens Admin Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+               url("{{ url_for('static', filename='images/hero1.jpg') }}");
+    background-size:cover;
+    background-position:center;
+}
+
+.login-box{
+
+    width:400px;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    animation:fade .8s;
+
+}
+
+.logo{
+
+    width:100px;
+    height:100px;
+
+    margin:auto;
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+.logo img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}
+
+.logo img{
+
+    width:80px;
+    height:80px;
+
+    object-fit:contain;
+
+}
+h2{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#f5f5f5;
+
+    margin-bottom:30px;
+
+}
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:20px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:14px 45px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+.input-box input::placeholder{
+
+    color:#eeeeee;
+
+}
+
+.input-box input:focus{
+
+    border-color:#2e7d32;
+
+    outline:none;
+
+    box-shadow:0 0 12px rgba(46,125,50,.3);
+
+}
+
+.input-box i:first-child{
+
+    position:absolute;
+
+    left:15px;
+
+    top:16px;
+
+    color:#777;
+
+}
+
+#togglePassword{
+
+    position:absolute;
+
+    right:15px;
+
+    top:16px;
+
+    cursor:pointer;
+
+    color:#777;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#00c853,#2e7d32);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+    box-shadow:0 8px 20px rgba(0,200,83,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.02);
+
+    box-shadow:0 15px 35px rgba(0,200,83,.5);
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="logo">
+
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Ondiri Gardens Logo">
+
+</div>
+
+<h2>Ondiri Gardens</h2>
+
+<p>Administrator Login</p>
+
+<form method="POST">
+
+<div class="input-box">
+
+<i class="fas fa-user"></i>
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fas fa-lock"></i>
+
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Password"
+required>
+
+<i class="fas fa-eye" id="togglePassword"></i>
+
+</div>
+<button type="submit" id="loginBtn">
+
+<span id="btnText">
+<i class="fas fa-right-to-bracket"></i>
+Login
+</span>
+
+<span id="loading" style="display:none;">
+<i class="fas fa-spinner fa-spin"></i>
+Signing in...
+</span>
+
+</button>
+
+</form>
+
+</div>
+
+<script>
+const toggle=document.getElementById("togglePassword");
+const password=document.getElementById("password");
+
+toggle.onclick=function(){
+
+    if(password.type==="password"){
+
+        password.type="text";
+        toggle.classList.replace("fa-eye","fa-eye-slash");
+
+    }else{
+
+        password.type="password";
+        toggle.classList.replace("fa-eye-slash","fa-eye");
+
+    }
+
+};
+
+document.querySelector("form").addEventListener("submit", function(){
+
+    document.getElementById("btnText").style.display="none";
+    document.getElementById("loading").style.display="inline";
+    document.getElementById("loginBtn").disabled=true;
+
+});
+const toggle=document.getElementById("togglePassword");
+
+const password=document.getElementById("password");
+
+toggle.onclick=function(){
+
+if(password.type==="password"){
+
+password.type="text";
+
+toggle.classList.replace("fa-eye","fa-eye-slash");
+
+}else{
+
+password.type="password";
+
+toggle.classList.replace("fa-eye-slash","fa-eye");
+
+}
+
+}
+
+</script>
+<script>
+
+document.querySelector("form").addEventListener("submit", function(){
+
+    document.getElementById("btnText").style.display="none";
+
+    document.getElementById("loading").style.display="inline";
+
+    document.getElementById("loginBtn").disabled=true;
+
+});
+
+</script>
+</body>
+</html>

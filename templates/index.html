@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Ondiri Gardens</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🌿 Ondiri Gardens</h1>
+
+
+    <div class="menu-btn">
+        ☰
+    </div>
+
+
+
+  <nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#why-us">Why Choose Us</a>
+
+<a href="#booking">Book Now</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+
+<!-- ==========================
+HOME SLIDER
+========================== -->
+
+
+<section id="home" class="hero">
+
+
+<div class="slider">
+
+
+    <img class="slide active"
+    src="{{ url_for('static', filename='images/garden1.jpg') }}">
+
+
+
+    <img class="slide"
+    src="{{ url_for('static', filename='images/garden2.jpg') }}">
+
+
+
+    <img class="slide"
+    src="{{ url_for('static', filename='images/garden3.jpg') }}">
+
+
+
+    <img class="slide"
+    src="{{ url_for('static', filename='images/garden4.jpg') }}">
+
+
+
+    <button class="prev">
+        &#10094;
+    </button>
+
+
+    <button class="next">
+        &#10095;
+    </button>
+
+
+
+    <div class="dots">
+
+        <span class="dot active"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+    </div>
+
+
+</div>
+
+
+
+
+<div class="hero-text">
+
+
+<h2>
+Welcome to Ondiri Gardens
+</h2>
+
+
+<p>
+A peaceful place surrounded by nature,
+beautiful flowers and fresh air.
+</p>
+
+
+
+<a href="#gallery" class="btn">
+View Gallery
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<main>
+
+
+<h2>
+Beautiful Events & Nature Experience
+</h2>
+
+
+<p>
+A beautiful place for weddings, birthdays,
+photography, relaxation and unforgettable events.
+</p>
+
+
+<a href="#booking" class="btn">
+Book Now
+</a>
+
+
+</main>
+<!-- ==========================
+GALLERY SECTION
+========================== -->
+
+<section id="gallery" class="gallery">
+
+<h2>
+Our Beautiful Gardens
+</h2>
+
+
+
+<div class="gallery-container">
+
+
+<a href="{{ url_for('static', filename='images/garden1.jpg') }}">
+
+<img src="{{ url_for('static', filename='images/garden1.jpg') }}"
+alt="Garden 1">
+
+</a>
+
+
+
+<a href="{{ url_for('static', filename='images/garden2.jpg') }}">
+
+<img src="{{ url_for('static', filename='images/garden2.jpg') }}"
+alt="Garden 2">
+
+</a>
+
+
+
+<a href="{{ url_for('static', filename='images/garden3.jpg') }}">
+
+<img src="{{ url_for('static', filename='images/garden3.jpg') }}"
+alt="Garden 3">
+
+</a>
+
+
+
+<a href="{{ url_for('static', filename='images/garden4.jpg') }}">
+
+<img src="{{ url_for('static', filename='images/garden4.jpg') }}"
+alt="Garden 4">
+
+</a>
+
+
+
+<a href="{{ url_for('static', filename='images/garden5.jpg') }}">
+
+<img src="{{ url_for('static', filename='images/garden5.jpg') }}"
+alt="Garden 5">
+
+</a>
+
+
+
+<a href="{{ url_for('static', filename='images/garden6.jpg') }}">
+
+<img src="{{ url_for('static', filename='images/garden6.jpg') }}"
+alt="Garden 6">
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+ABOUT SECTION
+========================== -->
+
+
+<section id="about" class="about">
+
+
+<h2>
+About Ondiri Gardens
+</h2>
+
+
+
+<p>
+
+Ondiri Gardens is a beautiful and peaceful destination
+where people can relax, celebrate special occasions,
+and enjoy nature.
+
+Whether you are planning a wedding, birthday,
+photoshoot, or family gathering, Ondiri Gardens
+offers a perfect environment with beautiful flowers,
+green lawns, and fresh air.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+WHY CHOOSE US
+========================== -->
+
+
+<section id="why-us" class="why-us">
+
+
+<h2>
+Why Choose Ondiri Gardens?
+</h2>
+
+
+
+<div class="why-container">
+
+
+
+<div class="card">
+
+<h3>
+🌿 Beautiful Gardens
+</h3>
+
+<p>
+Enjoy breathtaking gardens filled with colorful
+flowers and green lawns.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+📸 Perfect for Photography
+</h3>
+
+<p>
+Create unforgettable memories with beautiful
+backgrounds for photos and videos.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+💍 Weddings & Events
+</h3>
+
+<p>
+An ideal venue for weddings, birthdays,
+meetings and celebrations.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🌳 Peaceful Environment
+</h3>
+
+<p>
+Relax in a calm atmosphere surrounded by
+nature and fresh air.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🚗 Spacious Parking
+</h3>
+
+<p>
+Safe and convenient parking for visitors.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+👨‍👩‍👧 Family Friendly
+</h3>
+
+<p>
+A welcoming place for families and friends.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+<!-- ==========================
+BOOKING SECTION
+========================== -->
+
+
+<section id="booking" class="booking">
+
+
+<h2>
+Book Ondiri Gardens
+</h2>
+
+
+
+<form action="/book" method="POST">
+
+
+
+<input 
+type="text"
+name="name"
+placeholder="Your Name"
+required
+>
+
+
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required
+>
+
+
+
+<input
+type="tel"
+name="phone"
+placeholder="Your Phone Number"
+required
+>
+
+
+
+<select name="event" required>
+
+
+<option value="">
+Select Event Type
+</option>
+
+
+<option value="Wedding">
+Wedding
+</option>
+
+
+<option value="Birthday Party">
+Birthday Party
+</option>
+
+
+<option value="Photography">
+Photography
+</option>
+
+
+<option value="Family Event">
+Family Event
+</option>
+
+
+<option value="Other">
+Other
+</option>
+
+
+</select>
+
+
+
+
+<input
+type="date"
+name="date"
+required
+>
+
+
+
+
+<textarea
+name="message"
+placeholder="Tell us about your event">
+</textarea>
+
+
+
+
+<button type="submit">
+
+Send Booking Request
+
+</button>
+
+
+
+</form>
+
+
+
+</section>
+<!-- ==========================
+CONTACT SECTION
+========================== -->
+
+
+<section id="contact" class="contact">
+
+
+<h2>
+Contact Us
+</h2>
+
+
+
+<p>
+📍 Location: Ondiri Gardens, Kikuyu, Kenya
+</p>
+
+
+
+<p>
+📞 Phone:
+<a href="tel:+254743562856">
++254 743562856
+</a>
+</p>
+
+
+
+<p>
+✉️ Email:
+<a href="mailto:sharksammy6@gmail.com">
+sharksammy6@gmail.com
+</a>
+</p>
+
+
+
+<p>
+🕒 Opening Hours:
+Monday - Sunday | 8:00 AM - 6:00 PM
+</p>
+
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+MAP SECTION
+========================== -->
+
+
+<section id="map">
+
+
+<h2>
+Find Us
+</h2>
+
+
+
+<iframe
+
+src="https://maps.google.com/maps?q=Ondiri%20Gardens%20Gitaru%20Kiambu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+
+width="100%"
+
+height="450"
+
+style="border:0;"
+
+allowfullscreen=""
+
+loading="lazy">
+
+</iframe>
+
+
+
+</section>
+
+
+
+
+<br><br>
+
+
+
+<a
+
+href="https://www.google.com/maps/search/?api=1&query=Ondiri+Gardens+Gitaru+Kiambu"
+
+target="_blank"
+
+class="directions-btn">
+
+📍 Get Directions
+
+</a>
+
+
+
+
+
+
+<!-- ==========================
+REVIEWS SECTION
+========================== -->
+
+
+<section class="reviews">
+
+
+<h2>
+⭐ Visitor Reviews
+</h2>
+
+
+
+
+<form action="/review" method="POST">
+
+
+
+<input
+
+type="text"
+
+name="name"
+
+placeholder="Your Name"
+
+required>
+
+
+
+<br><br>
+
+
+
+<textarea
+
+name="message"
+
+placeholder="Write your review..."
+
+rows="5"
+
+required>
+
+</textarea>
+
+
+
+<br><br>
+
+
+
+<button type="submit">
+
+Submit Review
+
+</button>
+
+
+
+</form>
+
+
+
+
+
+<br>
+
+
+
+{% for review in reviews %}
+
+
+<div class="review-card">
+
+
+<h3>
+{{ review[1] }}
+</h3>
+
+
+<p>
+{{ review[2] }}
+</p>
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</section>
+<!-- ==========================
+AVAILABILITY CALENDAR
+========================== -->
+
+
+<section id="availability">
+
+
+<h2>
+Availability Calendar
+</h2>
+
+
+
+<p>
+Check available dates before booking your event.
+</p>
+
+
+
+
+<table class="calendar-table">
+
+
+<tr>
+
+<th>
+Date
+</th>
+
+
+<th>
+Status
+</th>
+
+
+</tr>
+
+
+
+
+{% for date in booked_dates %}
+
+
+<tr>
+
+
+<td>
+{{ date }}
+</td>
+
+
+
+<td class="booked">
+❌ Booked
+</td>
+
+
+
+</tr>
+
+
+{% endfor %}
+
+
+
+
+
+{% if booked_dates|length == 0 %}
+
+
+<tr>
+
+
+<td colspan="2" class="available">
+
+✅ No booked dates yet.
+All dates are currently available.
+
+</td>
+
+
+</tr>
+
+
+{% endif %}
+
+
+
+</table>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+
+<footer>
+
+
+<p>
+&copy; 2026 Ondiri Gardens. All Rights Reserved.
+</p>
+
+
+
+<p>
+Designed with ❤️ using Flask and Python.
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<!-- ==========================
+JAVASCRIPT
+========================== -->
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+
+
+
+<!-- ==========================
+WHATSAPP BUTTON
+========================== -->
+
+
+<a
+
+href="https://wa.me/254743562856?text=Hello%20Ondiri%20Gardens,%20I%20want%20to%20make%20a%20booking"
+
+class="whatsapp-button"
+
+target="_blank">
+
+
+💬 Book on WhatsApp
+
+
+</a>
+
+
+
+
+
+</body>
+
+
+</html>

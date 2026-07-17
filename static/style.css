@@ -1,0 +1,629 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e8f5e9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #43a047;
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #43a047;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #2e7d32;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background: white;
+}
+
+.about h2 {
+    color: #2e7d32;
+}
+
+/* Gallery */
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #2e7d32;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* Why Choose Us */
+.why-us {
+    background: #f1f8e9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-us h2 {
+    color: #2e7d32;
+}
+
+.why-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-us li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/* Contact */
+.contact {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background: white;
+    color: #2e7d32;
+}
+
+.contact .btn:hover {
+    background: #c8e6c9;
+}
+
+/* Footer */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #c8e6c9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 90%;
+        height: auto;
+    }
+
+    .about,
+    .why-us,
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+section {
+    scroll-margin-top: 100px;
+}
+/* Why Choose Us Cards */
+
+.why-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    color: #2e7d32;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Image Slider */
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+/* Slider Dark Overlay */
+
+.slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.25)
+    );
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* Hero Text */
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 85%;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Slider Buttons */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 28px;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+/* Slider Dots */
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 4;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.dot.active {
+    opacity: 1;
+    background: #43a047;
+}
+
+.dot:hover {
+    opacity: 1;
+}
+/* Mobile Menu */
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #2e7d32;
+        margin-top: 15px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
+/* Booking Section */
+
+.booking {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.booking h2 {
+    color: #2e7d32;
+    margin-bottom: 30px;
+}
+
+.booking form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking input,
+.booking select,
+.booking textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.booking textarea {
+    height: 120px;
+    resize: none;
+}
+
+.booking button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background: #1b5e20;
+}
+/* ==========================
+   VISITOR REVIEWS
+========================== */
+
+.reviews{
+    background:#ffffff;
+    padding:40px;
+    margin:40px auto;
+    max-width:900px;
+    border-radius:10px;
+}
+
+.reviews h2{
+    color:#2e7d32;
+    text-align:center;
+}
+
+.reviews input,
+.reviews textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.reviews button{
+    background:#2e7d32;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.reviews button:hover{
+    background:#1b5e20;
+}
+
+.review-card{
+    background:#f8f8f8;
+    margin-top:20px;
+    padding:15px;
+    border-left:5px solid #2e7d32;
+    border-radius:5px;
+}
+#map{
+    padding:40px;
+    text-align:center;
+    background:#f5f5f5;
+}
+
+#map h2{
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+#map iframe{
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+.directions-btn{
+    display:inline-block;
+    background:#2e7d32;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.directions-btn:hover{
+    background:#1b5e20;
+    transform:scale(1.05);
+}
+/* ==========================
+   Availability Calendar
+========================== */
+
+#availability{
+    padding:40px;
+    background:#ffffff;
+    text-align:center;
+}
+
+#availability h2{
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+.calendar-table{
+    width:80%;
+    margin:auto;
+    border-collapse:collapse;
+}
+
+.calendar-table th,
+.calendar-table td{
+    border:1px solid #ddd;
+    padding:15px;
+}
+
+.calendar-table th{
+    background:#2e7d32;
+    color:white;
+}
+
+.available{
+    color:green;
+    font-weight:bold;
+}
+
+.booked{
+    color:red;
+    font-weight:bold;
+}
+/* WhatsApp Button */
+
+.whatsapp-button{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    background:#25D366;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    z-index:9999;
+
+}
+
+
+.whatsapp-button:hover{
+
+    opacity:0.8;
+
+}
